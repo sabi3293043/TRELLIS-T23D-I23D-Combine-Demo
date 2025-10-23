@@ -287,8 +287,8 @@ Input different views of the object in separate images.
                     image_video_output = gr.Video(label="Generated 3D Asset", autoplay=True, loop=True, height=300)
                     image_model_output = LitModel3D(label="Extracted GLB/Gaussian", exposure=10.0, height=300)
                     with gr.Row():
-                        image_download_glb = gr.DownloadButton(label="Download GLB", interactive=False)
-                        image_download_gs = gr.DownloadButton(label="Download Gaussian", interactive=False)
+                        image_download_glb = gr.DownloadButton(label="Download GLB", interactive=True)
+                        image_download_gs = gr.DownloadButton(label="Download Gaussian", interactive=True)
             is_multiimage = gr.State(False)
             image_output_buf = gr.State()
             with gr.Row() as single_image_example:
@@ -398,8 +398,8 @@ Input different views of the object in separate images.
                     text_video_output = gr.Video(label="Generated 3D Asset", autoplay=True, loop=True, height=300)
                     text_model_output = LitModel3D(label="Extracted GLB/Gaussian", exposure=10.0, height=300)
                     with gr.Row():
-                        text_download_glb = gr.DownloadButton(label="Download GLB", interactive=False)
-                        text_download_gs = gr.DownloadButton(label="Download Gaussian", interactive=False)
+                        text_download_glb = gr.DownloadButton(label="Download GLB", interactive=True)
+                        text_download_gs = gr.DownloadButton(label="Download Gaussian", interactive=True)
             text_output_buf = gr.State()
             text_generate_btn.click(
                 get_seed,
